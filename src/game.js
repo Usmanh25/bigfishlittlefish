@@ -47,18 +47,26 @@ class Game {
     }
 
     winGame() {
+        clearInterval(this.createEnemy)
+        clearInterval(this.createEnemy2)
+        clearInterval(this.createEnemy3)
+        clearInterval(this.createShark)
+        this.ctx.clearRect(0, 0, canvas.width, canvas.height);
         this.enemies = [];
         this.enemies2 = [];
         this.enemies3 = [];
         this.sharks = [];
         this.player = null;
-
-
         const menu = document.getElementById('gamewinmenu')
         menu.style.display = 'flex';
     }
 
     stopGame() {
+        clearInterval(this.createEnemy)
+        clearInterval(this.createEnemy2)
+        clearInterval(this.createEnemy3)
+        clearInterval(this.createShark)
+        this.ctx.clearRect(0, 0, canvas.width, canvas.height);
         this.enemies = [];
         this.enemies2 = [];
         this.enemies3 = [];
@@ -76,7 +84,10 @@ class Game {
     
     update(ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        this.drawPlayer();
+        if (this.player) {
+            this.drawPlayer()
+        }
+        // this.drawPlayer();
         this.drawEnemies();
         this.drawEnemies2();
         this.drawEnemies3();
@@ -85,7 +96,9 @@ class Game {
         this.checkCollisionEnemy2();
         this.checkCollisionEnemy3();
         this.checkCollisionShark();
-        this.player.handleEdges();
+        if (this.player) {
+            this.player.handleEdges();
+        }    
     }
 
     drawPlayer() {

@@ -17,32 +17,36 @@ document.addEventListener("DOMContentLoaded", function(){
         game.startGame();
         game.update(ctx);
         document.addEventListener('keydown', player.keyDown);
+        // document.addEventListener('mouseover', player.mouseDown); <----Trying to add mouseover functionality
+
     })
 
     document.getElementById('restart-button').addEventListener('click', (e) => {
-        e.preventDefault();
-        const ctx = canvas.getContext('2d');
-        document.getElementById('gameovermenu').style.display = 'none';
-        document.getElementById('canvas').style.display = 'flex';
-        const player = new Player();
-        const game = new Game(canvas, player);
-        window.game = game;
-        game.startGame();
-        game.update(ctx);
-        document.addEventListener('keydown', player.keyDown);
+        window.location.reload() //<---------------QUICKFIX BUG FOR PRESENTATION
+        // e.preventDefault();
+        // const ctx = canvas.getContext('2d');
+        // document.getElementById('gameovermenu').style.display = 'none';
+        // document.getElementById('canvas').style.display = 'flex';
+        // const player = new Player();
+        // const game = new Game(canvas, player);
+        // window.game = game;
+        // game.startGame();
+        // game.update(ctx);
+        // document.addEventListener('keydown', player.keyDown);
     })
 
     document.getElementById('replay-button').addEventListener('click', (e) => {
-        e.preventDefault();
-        const ctx = canvas.getContext('2d');
-        document.getElementById('gamewinmenu').style.display = 'none';
-        document.getElementById('canvas').style.display = 'flex';
-        const player = new Player();
-        const game = new Game(canvas, player);
-        window.game = game;
-        game.startGame();
-        game.update(ctx);
-        document.addEventListener('keydown', player.keyDown);
+        window.location.reload() //<---------------QUICKFIX BUG FOR PRESENTATION
+        // e.preventDefault();
+        // const ctx = canvas.getContext('2d');
+        // document.getElementById('gamewinmenu').style.display = 'none';
+        // document.getElementById('canvas').style.display = 'flex';
+        // const player = new Player();
+        // const game = new Game(canvas, player);
+        // window.game = game;
+        // game.startGame();
+        // game.update(ctx);
+        // document.addEventListener('keydown', player.keyDown);
     })
 
 });

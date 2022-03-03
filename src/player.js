@@ -5,6 +5,9 @@ class Player {
         this.ctx = canvas.getContext('2d')
         this.canvas = document.getElementById("canvas")
 
+        this.canvas.width = 1200;
+        this.canvas.height = 700;
+
         this.x = 80;
         this.y = 295;
 
@@ -14,6 +17,8 @@ class Player {
         this.img = new Image();
         this.img.src = "src/assets/Player.png"
         this.keyDown = this.keyDown.bind(this);
+        // this.mouseDown = this.mouseDown.bind(this); <---Trying to add mouseover functionality
+
     }
     
     draw() {
@@ -36,7 +41,6 @@ class Player {
         this.x += 20
     }
 
-    
     keyDown(e) {
         
         if (e.key === "ArrowUp" || e.key === "Up") {
@@ -68,5 +72,26 @@ class Player {
         }
     }
     
+    // mouseDown(e) {
+    //     const canvasPosition = this.canvas.getBoundingClientRect()
+    //     const mouse = {
+    //         x: this.canvas.width/2,
+    //         y: this.canvas.height/2
+    //     }
+    //     mouse.x = e.x - canvasPosition.left;
+    //     mouse.y = e.y - canvasPosition.top;
+    
+    //     const dx = this.x - mouse.x
+    //     const dy = this.y - mouse.y
+    
+    //     if (mouse.x != this.x) {
+    //         this.x -= dx/15
+    //     }
+    //     if (mouse.y != this.y) {
+    //         this.y -= dy/15
+    //     }
+    
+    //     console.log(this.x, this.y)
+    // }
 }
 export default Player;
