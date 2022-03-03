@@ -185,6 +185,9 @@ class Game {
                     this.enemies3.splice(this.enemies3.indexOf(enemy3), 1);
                     this.player.height -= 20;
                     this.player.width -= 40;
+                    if (this.player.height <= 0) {
+                        this.stopGame()
+                    }
             }
         })
     }
@@ -193,7 +196,7 @@ class Game {
         this.sharks.forEach(shark => {
             let winner = false
 
-            if (this.player.height > 250 && this.player.width > 500) {
+            if (this.player.height > 200 && this.player.width > 450) {
                 winner = true
             }
 
@@ -202,6 +205,7 @@ class Game {
                 this.player.y < shark.y + shark.height &&
                 this.player.y + this.player.height > shark.y && 
                 winner === true) {
+                    console.log(this.player.length, this.player.width)
                     this.winGame()
             }
                 
@@ -210,6 +214,7 @@ class Game {
                 this.player.y < shark.y + shark.height &&
                 this.player.y + this.player.height > shark.y && 
                 winner === false) {
+                    console.log(this.player.length, this.player.width)
                     this.stopGame()
             }
         })

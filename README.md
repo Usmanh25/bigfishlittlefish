@@ -2,28 +2,23 @@
 
 ## Background
 
-My project is going to be a game called "Big Fish Little Fish" The game has a simple user interface, using only the up and down arrow keys to maneuver a fish up and down along the left side of the screen. The point of the game is to avoid bigger fish and sharks that are rendered into the screen from the right side, transversing from right to left in a horizontal line. If you make contact with a shark, or a fish of your size or bigger, you lose the game. If a fish is smaller and you make contact, the player fish increases in size, and the game speeds up one level. There are only 3 max levels, until the fish is at it's largest possible size. From that point, sharks are rendered twice as fast and the goal is to compile the largest score possible.
-
-Score is calculated as 500 points per second, and 1000 points per eaten fish. As you increase by level, there are 500 points added per eaten fish.
-
+My project is going to be a game called "Big Fish Little Fish" The game has a simple user interface, using the arrow keys to maneuver a fish around the screen. The point of the game is to eat other fish and grow in size. Whie doing so, you must avoid sharks that are rendered into the screen, transversing towards you in horizontal lines. If you are smaller than the shark and make contact, you lose the game. If you are bigger than the shark and make contact, you win.
 
 ## Functionality & MVPs
 
 In "Big Fish Little Fish," users will be able to:
 
-- Move up and down, controlling the fish's movement
+- Move up/down/left/right to control the fish's movement
 
-- Add in their name to a submit box after losing, to log their high score (if they do not log in a name and just press the 'submit score' button a generic name is added to the leaderboard
+- Increase in size when eating brown or blue fish
 
-- mute the game music
+- Decrease in size when eating yellow fish
 
 In addition, this project will include:
 
-- a Main Menu where users can select options to "Play Game", view the "Instructions" or see the "Leaderboard" of high scores, as well as "Mute"
+- a Main Menu where users can select options to "Play Game"
 
-- a "You Lose" Menu, where users can select options to "Play Again" or view "Leaderboard" as well as "Mute"
-
-- some nautical backround music
+- a "You Lose" Menu, where users can select options to return to the Main Menu 
 
 ## Wireframe
 
@@ -33,21 +28,12 @@ In addition, this project will include:
 
 - I will be using canvas
 
-## Implementation Timeline
+## Future Features
 
+- Adding mouseover functionality to control the fish with your cursor
 
-Friday Afternoon & Weekend
-- Get the main menu functioning with all 3 buttons and the "play" button should to initialize the game consist of all moving pieces to be rendered 
+- Adding mousedown functionality to control the fish with touchscreens
 
-Monday
-- Initiate the ability to grow a fish once you have eaten a smaller fish and increasing game speed
+- Game Music with Sound Affects and Mute Buttons
 
-Tuesday
-- Initiaite the score calculation
-
-Wednesday
-- finish the "You Lose" menu and refine all bugs and button functions
-
-Thursday Morning
-- more refining
-
+- Score calculation and high scores log 
