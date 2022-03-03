@@ -25,6 +25,9 @@ In addition, this project will include:
 
 - some nautical backround music
 
+## Wireframe
+
+<img src="https://github.com/Usmanh25/bigfishlittlefish/blob/master/src/assets/BFLF.png"></img>
 
 ## Technologies, Libraries, APIs
 
