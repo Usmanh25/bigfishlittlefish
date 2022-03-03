@@ -9,8 +9,38 @@
 </head>
 
 <body>
-    <h1></h1>
-    <canvas id="canvas"></canvas>
+
+    <div id="game-div">
+
+        <div id="menu">
+            <h1>Big Fish, Little Fish</h1>
+            <h2>Use the arrow keys to navigate the fish</h2>
+            <h2>Eat fish to increase size! Pufferfish are poisonous!</h2>
+            <h2>Avoid the Sharks until you're big enough!</h2>
+            <button type="button" id="start-button">
+                <h1>PLAY</h1>
+            </button>
+        </div>
+
+        
+        <canvas id="canvas"></canvas>
+
+        <div id = "gameovermenu" class="div_class" style="display:none">
+            <h1>GAME OVER</h1>
+            <button type="button" id="restart-button">
+                <h1>RESTART</h1>
+            </button>
+        </div>
+
+        <div id = "gamewinmenu" class="div_class" style="display:none">
+            <h1>YOU WIN</h1>
+            <button type="button" id="replay-button">
+                <h1>PLAY AGAIN</h1>
+            </button>
+        </div>
+
+    </div>
+
 </body>
 
 </html>

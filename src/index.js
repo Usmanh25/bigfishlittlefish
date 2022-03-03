@@ -3,20 +3,47 @@ import Game from "./game.js"
 
 
 document.addEventListener("DOMContentLoaded", function(){
-    const canvas = document.getElementById("canvas")
-    const ctx = canvas.getContext('2d')
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext('2d');
 
-    const player = new Player();
-    const game = new Game(canvas, player);
+    document.getElementById('start-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        const ctx = canvas.getContext('2d');
+        document.getElementById('menu').style.display = 'none';
+        document.getElementById('canvas').style.display = 'flex';
+        const player = new Player();
+        const game = new Game(canvas, player);
+        window.game = game;
+        game.startGame();
+        game.update(ctx);
+        document.addEventListener('keydown', player.keyDown);
+    })
 
-    document.addEventListener('keydown', player.keyDown);
+    document.getElementById('restart-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        const ctx = canvas.getContext('2d');
+        document.getElementById('gameovermenu').style.display = 'none';
+        document.getElementById('canvas').style.display = 'flex';
+        const player = new Player();
+        const game = new Game(canvas, player);
+        window.game = game;
+        game.startGame();
+        game.update(ctx);
+        document.addEventListener('keydown', player.keyDown);
+    })
 
-    // document.addEventListener('keyup', player.keyUp);
-
-
-    game.start();
-    // game.play();
-    game.update(ctx);
+    document.getElementById('replay-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        const ctx = canvas.getContext('2d');
+        document.getElementById('gamewinmenu').style.display = 'none';
+        document.getElementById('canvas').style.display = 'flex';
+        const player = new Player();
+        const game = new Game(canvas, player);
+        window.game = game;
+        game.startGame();
+        game.update(ctx);
+        document.addEventListener('keydown', player.keyDown);
+    })
 
 });
 

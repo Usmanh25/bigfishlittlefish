@@ -1,4 +1,4 @@
-class EnemyFish {
+class EnemyFish3 {
 
     constructor(){
 
@@ -12,7 +12,7 @@ class EnemyFish {
         this.height = 60;
         
         this.img = new Image();
-        this.img.src = "src/assets/Enemy.png";
+        this.img.src = "src/assets/Enemy3.png";
     }
 
     draw() {
@@ -21,4 +21,4 @@ class EnemyFish {
 
 }
 
-export default EnemyFish;
+export default EnemyFish3;

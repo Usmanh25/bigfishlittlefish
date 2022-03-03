@@ -18,6 +18,158 @@ body {
     width: 1200px;
     height: 700px;
     border: 1px solid black;
-    background-image: url(https://e7.pngegg.com/pngimages/234/762/png-clipart-sunlight-underwater-sunlight-ray-underwater-sun-rays-atmosphere-computer-wallpaper.png);
+    background-image: url(https://images.assetsdelivery.com/compings_v2/midosemsem/midosemsem1903/midosemsem190300006.jpg);
     background-size: cover;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding: 50px;
+    background: none;
+    border: whitesmoke solid 2px;
+    border-radius: 2px;
+    width: 80%;
+    height: 80%;
+}
+
+#menu > h1 {
+    font-size: 105px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+    height: 50%;
+
+}
+
+#menu > h2 {
+    font-size: 35px;;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    color: white;
+    height: 10%;
+
+}
+
+#start-button {
+    width: 40%;
+    border: whitesmoke solid 8px;
+    background: purple;
+    margin: 10px;
+    font-size: 35px;;
+    background-color: turquoise;
+}
+
+#start-button > h1 {
+    border: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#start-button:hover{
+    cursor: pointer;
+}
+
+.div_class {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px
+}
+
+#gameovermenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding: 50px;
+    background: none;
+    border: whitesmoke solid 2px;
+    border-radius: 2px;
+    width: 75%;
+    height: 75%;
+}
+
+#restart-button {
+    width: 40%;
+    border: whitesmoke solid 8px;
+    background: purple;
+    margin: 10px;
+    font-size: 35px;;
+    background-color: turquoise;
+}
+
+#restart-button > h1 {
+    border: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#restart-button:hover{
+    cursor: pointer;
+}
+
+#gamewinmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding: 50px;
+    background: none;
+    border: whitesmoke solid 2px;
+    border-radius: 2px;
+    width: 75%;
+    height: 75%;
+}
+
+#replay-button {
+    width: 40%;
+    border: whitesmoke solid 8px;
+    background: purple;
+    margin: 10px;
+    font-size: 35px;;
+    background-color: turquoise;
+}
+
+#replay-button > h1 {
+    border: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#replay-button:hover{
+    cursor: pointer;
 }

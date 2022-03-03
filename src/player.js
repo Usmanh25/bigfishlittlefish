@@ -1,75 +1,72 @@
 class Player {
-    
+
     constructor(){
+        
         this.ctx = canvas.getContext('2d')
         this.canvas = document.getElementById("canvas")
-        this.x = 100;
-        this.y = 350;
-        this.radius = 50;
-        this.vel = new Vector()
-        // this.speed = 9 <------IDK
+
+        this.x = 80;
+        this.y = 295;
+
+        this.width = 120;
+        this.height = 60;
+
         this.img = new Image();
-        this.img.src = "https://www.pngpix.com/wp-content/uploads/2016/11/PNGPIX-COM-Tuna-Fish-PNG-Transparent-Image.png"
-        this.moveUp = this.moveUp.bind(this);
-        this.moveDown = this.moveDown.bind(this);
-        // this.keyUp = this.keyUp.bind(this);
+        this.img.src = "src/assets/Player.png"
         this.keyDown = this.keyDown.bind(this);
+    }
+    
+    draw() {
+        this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
 
     moveUp() {  
-        this.y -= 10
-        // this.update()
+        this.y -= 20
     }    
     
     moveDown() {  
-        this.y += 10
-        // this.update()
+        this.y += 20
     }
 
-    update() {
-        this.draw()
+    moveLeft() {  
+        this.x -= 20
+    }    
+    
+    moveRight() {  
+        this.x += 20
     }
 
+    
     keyDown(e) {
-
-        console.log(this)
-
         
         if (e.key === "ArrowUp" || e.key === "Up") {
             this.moveUp()
-            console.log("up");
-
         }
         if (e.key === "ArrowDown" || e.key === "Down") {
             this.moveDown()
-            console.log("down");
         }
-        // this.update(this.ctx)
+        if (e.key === "ArrowLeft" || e.key === "Left") {
+            this.moveLeft()
+        }
+        if (e.key === "ArrowRight" || e.key === "Right") {
+            this.moveRight()
+        }
     } 
 
-    // keyUp(e) {
-
-    //     if (e.key === "ArrowUp" || e.key === "Up") {
-    //         this.y = 0
-
-    //     }
-    //     if (e.key === "ArrowDown" || e.key === "Down") {
-    //         this.y = 0
-    //     }
-    //     // this.update(this.ctx)
-    // }
-
-
-    draw() {
-        this.ctx.drawImage(this.img, this.x, this.y, 170, 120)
-
-    }
-
     handleEdges()  {
-        if (this.y <= 0 || this.y >= 1200) console.log("running")
+        if (this.y <= -75) {
+            this.y = -75
+        }
+        if (this.y >= 700) {
+            this.y = 700
+        }
+        if (this.x <= 10) {
+            this.x = 10
+        }
+        if (this.x >= 1000) {
+            this.x = 1000
+        }
     }
-
-
+    
 }
-
 export default Player;
