@@ -1,11 +1,11 @@
 import Player from "./player.js"
 import Game from "./game.js"
 
-
 document.addEventListener("DOMContentLoaded", function(){
+    
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext('2d');
-
+    
     document.getElementById('start-button').addEventListener('click', (e) => {
         e.preventDefault();
         const ctx = canvas.getContext('2d');
@@ -16,13 +16,22 @@ document.addEventListener("DOMContentLoaded", function(){
         window.game = game;
         game.startGame();
         game.update(ctx);
+        window.addEventListener('click', game.playMusic())
         document.addEventListener('keydown', player.keyDown);
+
+        
+
+
+
         // document.addEventListener('mouseover', player.mouseDown); <----Trying to add mouseover functionality
 
     })
 
     document.getElementById('restart-button').addEventListener('click', (e) => {
         window.location.reload() //<---------------QUICKFIX BUG FOR PRESENTATION
+
+
+
         // e.preventDefault();
         // const ctx = canvas.getContext('2d');
         // document.getElementById('gameovermenu').style.display = 'none';
@@ -37,6 +46,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
     document.getElementById('replay-button').addEventListener('click', (e) => {
         window.location.reload() //<---------------QUICKFIX BUG FOR PRESENTATION
+
+
+
         // e.preventDefault();
         // const ctx = canvas.getContext('2d');
         // document.getElementById('gamewinmenu').style.display = 'none';

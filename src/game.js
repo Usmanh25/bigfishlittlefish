@@ -38,6 +38,12 @@ class Game {
 
     }
 
+    playMusic() {
+        const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3')
+        music.play()
+        music.loop = true;
+    }
+
     startGame() {
         let ctx = this.ctx;
 
