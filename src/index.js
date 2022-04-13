@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
         window.addEventListener('click', game.playMusic())
         document.addEventListener('keydown', player.keyDown);
 
+        document.addEventListener('mousemove', player.mouseMove); 
         
 
 

@@ -17,6 +17,10 @@ class Player {
         this.img = new Image();
         this.img.src = "src/assets/Player.png"
         this.keyDown = this.keyDown.bind(this);
+        this.mouseMove = this.mouseMove.bind(this);
+
+
+
         // this.mouseDown = this.mouseDown.bind(this); <---Trying to add mouseover functionality
 
     }
@@ -72,26 +76,26 @@ class Player {
         }
     }
     
-    // mouseDown(e) {
-    //     const canvasPosition = this.canvas.getBoundingClientRect()
-    //     const mouse = {
-    //         x: this.canvas.width/2,
-    //         y: this.canvas.height/2
-    //     }
-    //     mouse.x = e.x - canvasPosition.left;
-    //     mouse.y = e.y - canvasPosition.top;
+    mouseMove(e) {
+        const canvasPosition = this.canvas.getBoundingClientRect()
+        const mouse = {
+            x: this.canvas.width/2,
+            y: this.canvas.height/2
+        }
+        mouse.x = e.x - canvasPosition.left;
+        mouse.y = e.y - canvasPosition.top;
     
-    //     const dx = this.x - mouse.x
-    //     const dy = this.y - mouse.y
+        const dx = this.x - mouse.x
+        const dy = this.y - mouse.y
     
-    //     if (mouse.x != this.x) {
-    //         this.x -= dx/15
-    //     }
-    //     if (mouse.y != this.y) {
-    //         this.y -= dy/15
-    //     }
+        if (mouse.x != this.x) {
+            this.x -= dx/15
+        }
+        if (mouse.y != this.y) {
+            this.y -= dy/15
+        }
     
-    //     console.log(this.x, this.y)
-    // }
+        console.log(this.x, this.y)
+    }
 }
 export default Player;
