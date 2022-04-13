@@ -4,7 +4,7 @@ class Shark {
         this.ctx = canvas.getContext('2d')
         this.canvas = document.getElementById("canvas")
 
-        this.x = 1200;
+        this.x = 100;
         this.y = Math.random() * (550 - 100) + 100
 
         this.width = 500

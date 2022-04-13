@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function(){
         const player = new Player();
         const game = new Game(canvas, player);
         window.game = game;
+        game.playMusic()
         game.startGame();
         game.update(ctx);
         document.addEventListener('keydown', player.keyDown);
+        window.addEventListener('click', playMusic)
         // document.addEventListener('mouseover', player.mouseDown); <----Trying to add mouseover functionality
 
     })
