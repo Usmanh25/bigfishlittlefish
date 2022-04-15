@@ -23,25 +23,16 @@ body {
 }
 
 #menu {
+    background-color: purple;
+    // margin-top: 100px;
+    margin-left: 115px;
+    position: absolute;
+    height: 700px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    padding: 50px;
-    background: none;
-    border: whitesmoke solid 2px;
-    border-radius: 2px;
-    width: 80%;
-    height: 80%;
+
 }
 
 #menu > h1 {
@@ -67,7 +58,7 @@ body {
 
 }
 
-#start-button {
+#play {
     width: 40%;
     border: whitesmoke solid 8px;
     background: purple;
@@ -76,13 +67,13 @@ body {
     background-color: turquoise;
 }
 
-#start-button > h1 {
+#play > h1 {
     border: white;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#start-button:hover{
+#play:hover{
     cursor: pointer;
 }
 
@@ -172,4 +163,15 @@ body {
 
 #replay-button:hover{
     cursor: pointer;
+}
+
+#github {
+    height: 80px;
+    width: 80px;
+    margin-left: 100px
+}
+
+#linkedin {
+    height: 80px;
+    width: 80px;
 }
