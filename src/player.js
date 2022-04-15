@@ -16,13 +16,32 @@ class Player {
 
         this.img = new Image();
         this.img.src = "src/assets/Player.png"
+        this.img2 = new Image();
+        this.img2.src = "src/assets/Player_Flip.png"
         this.keyDown = this.keyDown.bind(this);
         this.mouseMove = this.mouseMove.bind(this);
 
     }
     
     draw() {
-        this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        // const mouse = {
+        //     x: this.canvas.width/2,
+        //     y: this.canvas.height/2
+        // }
+        const currentMouseX = this.x
+        const newMouseX = this.x
+
+        if (newMouseX >= currentMouseX) {
+            this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        } else {
+            this.ctx.drawImage(this.img2, this.x, this.y, this.width, this.height)
+        }
+
+        // console.log(currentMouseX)
+
+
+
+        
     }
 
     moveUp() {  
@@ -91,6 +110,6 @@ class Player {
             this.y -= dy/2
         }    
     }
-    
+
 }
 export default Player;
