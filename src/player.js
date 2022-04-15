@@ -24,7 +24,20 @@ class Player {
     }
     
     draw() {
+
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        // setInterval(() => {
+        //     this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        // }, 1000);
+
+        // const currentX = this.x
+        // const newX = currentX 
+
+
+
+
+
+
 
 
 
@@ -125,10 +138,10 @@ class Player {
         const dy = this.y - mouse.y
     
         if (mouse.x != this.x) {
-            this.x -= dx/2
+            this.x -= dx
         }
         if (mouse.y != this.y) {
-            this.y -= dy/2
+            this.y -= dy
         }    
     }
 
