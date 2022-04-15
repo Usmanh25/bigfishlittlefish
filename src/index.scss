@@ -35,6 +35,15 @@ body {
 
 }
 
+
+
+
+
+
+
+
+// _________________________________________________________________________________________________________________________
+
 #menu > h1 {
     font-size: 105px;
     font-family: Arial, Helvetica, sans-serif;
@@ -58,24 +67,6 @@ body {
 
 }
 
-#play {
-    width: 40%;
-    border: whitesmoke solid 8px;
-    background: purple;
-    margin: 10px;
-    font-size: 35px;;
-    background-color: turquoise;
-}
-
-#play > h1 {
-    border: white;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#play:hover{
-    cursor: pointer;
-}
 
 .div_class {
     color: white;
@@ -165,13 +156,64 @@ body {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#buttons {
+    background-color: green;
+}
+
 #github {
     height: 80px;
     width: 80px;
-    margin-left: 100px
+    float: right;
+    margin-right: -450px;
 }
 
 #linkedin {
     height: 80px;
+    float: left;
     width: 80px;
+    margin-left: -450px;
+}
+
+#play {
+    // width: 100%;
+    width: 300px;
+    border: whitesmoke solid 8px;
+    background: purple;
+    // margin: 10px;
+    font-size: 35px;;
+    background-color: aqua;
+}
+
+#play > h1 {
+    border: white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#play:hover{
+    cursor: pointer;
 }
