@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext('2d');
     
-    document.getElementById('start-button').addEventListener('click', (e) => {
+    document.getElementById('play').addEventListener('click', (e) => {
         e.preventDefault();
         const ctx = canvas.getContext('2d');
         document.getElementById('menu').style.display = 'none';
