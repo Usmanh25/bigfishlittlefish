@@ -91,5 +91,6 @@ class Player {
             this.y -= dy/2
         }    
     }
+    
 }
 export default Player;
