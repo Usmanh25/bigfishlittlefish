@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -23,20 +21,68 @@ body {
 }
 
 #menu {
-    background-color: purple;
-    // margin-top: 100px;
     margin-left: 115px;
     position: absolute;
     height: 700px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
+#menu > h1 {
+    font-size: 105px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    height: 125px;
+    border-bottom: 5px solid white;
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
 
+#menu > h2 {
+    font-size: 35px;;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    height: 10%;
+}
 
+#play {
+    margin-top: 30px;
+    width: 300px;
+    border: whitesmoke solid 8px;
+    font-size: 35px;;
+    background-color: aqua;
+}
+
+#play > h1 {
+    border: white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#play:hover{
+    cursor: pointer;
+}
+
+#github {
+    height: 80px;
+    width: 80px;
+    float: right;
+    margin-top: 30px;
+    margin-right: -400px;
+}
+
+#linkedin {
+    margin-top: 30px;
+    height: 80px;
+    float: left;
+    width: 80px;
+    margin-left: -400px;
+}
 
 
 
@@ -44,34 +90,7 @@ body {
 
 // _________________________________________________________________________________________________________________________
 
-#menu > h1 {
-    background-color: yellowgreen;
-    font-size: 105px;
-    font-family: Arial, Helvetica, sans-serif;
-    // width: 100%;
-    // margin-top: 5%;
-    text-align: center;
-    color: white;
-    height: 125px;
-    border-bottom: 5px solid white;
-    margin-top: 50px;
-    margin-bottom: 120px;
-    // height: 50%;
 
-}
-
-#menu > h2 {
-    background-color: pink;
-    font-size: 35px;;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    text-align: center;
-    // margin-top: 1%;
-    margin-bottom: 10px;
-    color: white;
-    height: 10%;
-
-}
 
 
 .div_class {
@@ -185,39 +204,3 @@ body {
 
 
 
-
-#buttons {
-    background-color: green;
-}
-
-#github {
-    height: 80px;
-    width: 80px;
-    float: right;
-    margin-right: -450px;
-}
-
-#linkedin {
-    height: 80px;
-    float: left;
-    width: 80px;
-    margin-left: -450px;
-}
-
-#play {
-    margin-top: 50px;
-    width: 300px;
-    border: whitesmoke solid 8px;
-    font-size: 35px;;
-    background-color: aqua;
-}
-
-#play > h1 {
-    border: white;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#play:hover{
-    cursor: pointer;
-}
