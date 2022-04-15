@@ -19,10 +19,6 @@ class Player {
         this.keyDown = this.keyDown.bind(this);
         this.mouseMove = this.mouseMove.bind(this);
 
-
-
-        // this.mouseDown = this.mouseDown.bind(this); <---Trying to add mouseover functionality
-
     }
     
     draw() {
@@ -89,13 +85,11 @@ class Player {
         const dy = this.y - mouse.y
     
         if (mouse.x != this.x) {
-            this.x -= dx/15
+            this.x -= dx/2
         }
         if (mouse.y != this.y) {
-            this.y -= dy/15
-        }
-    
-        console.log(this.x, this.y)
+            this.y -= dy/2
+        }    
     }
 }
 export default Player;

@@ -18,14 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
         game.update(ctx);
         window.addEventListener('click', game.playMusic())
         document.addEventListener('keydown', player.keyDown);
-
         document.addEventListener('mousemove', player.mouseMove); 
-        
-
-
-
-        // document.addEventListener('mouseover', player.mouseDown); <----Trying to add mouseover functionality
-
+    
     })
 
     document.getElementById('restart-button').addEventListener('click', (e) => {

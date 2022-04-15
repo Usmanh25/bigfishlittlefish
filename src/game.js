@@ -44,6 +44,11 @@ class Game {
         music.loop = true;
     }
 
+    playSoundEffect() {
+        const soundEffect = new Audio('src/assets/Sound_Effect.mp3')
+        soundEffect.play()
+    }
+
     startGame() {
         let ctx = this.ctx;
 
@@ -162,6 +167,7 @@ class Game {
                 this.player.x + this.player.width > enemy.x &&
                 this.player.y < enemy.y + enemy.height &&
                 this.player.y + this.player.height > enemy.y) {
+                    this.playSoundEffect()
                     this.enemies.splice(this.enemies.indexOf(enemy), 1);
                     this.player.height += 10;
                     this.player.width += 20;
@@ -175,6 +181,7 @@ class Game {
                 this.player.x + this.player.width > enemy2.x &&
                 this.player.y < enemy2.y + enemy2.height &&
                 this.player.y + this.player.height > enemy2.y) {
+                    this.playSoundEffect()
                     this.enemies2.splice(this.enemies2.indexOf(enemy2), 1);
                     this.player.height += 20;
                     this.player.width += 40; 
@@ -188,6 +195,7 @@ class Game {
                 this.player.x + this.player.width > enemy3.x &&
                 this.player.y < enemy3.y + enemy3.height &&
                 this.player.y + this.player.height > enemy3.y) {
+                    this.playSoundEffect()
                     this.enemies3.splice(this.enemies3.indexOf(enemy3), 1);
                     this.player.height -= 20;
                     this.player.width -= 40;
@@ -211,7 +219,7 @@ class Game {
                 this.player.y < shark.y + shark.height &&
                 this.player.y + this.player.height > shark.y && 
                 winner === true) {
-                    console.log(this.player.length, this.player.width)
+                    this.playSoundEffect()
                     this.winGame()
             }
                 
@@ -220,7 +228,7 @@ class Game {
                 this.player.y < shark.y + shark.height &&
                 this.player.y + this.player.height > shark.y && 
                 winner === false) {
-                    console.log(this.player.length, this.player.width)
+                    this.playSoundEffect()
                     this.stopGame()
             }
         })
