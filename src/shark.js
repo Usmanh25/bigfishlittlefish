@@ -17,8 +17,6 @@ class Shark {
     draw() {
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
-    
 }
 
 export default Shark;
-
