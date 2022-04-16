@@ -12,7 +12,6 @@ class Shark {
         
         this.img = new Image();
         this.img.src = "src/assets/Shark.png"
-     
     }
 
     draw() {

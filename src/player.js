@@ -20,11 +20,9 @@ class Player {
         this.img2.src = "src/assets/Player_Flip.png"
         this.keyDown = this.keyDown.bind(this);
         this.mouseMove = this.mouseMove.bind(this);
-
     }
     
     draw() {
-
         this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
 
         // setInterval(() => {

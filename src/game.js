@@ -1,4 +1,3 @@
-import Player from './player';
 import EnemyFish from './enemy_fish';
 import EnemyFish2 from './enemy_fish2';
 import EnemyFish3 from './enemy_fish3';
@@ -22,34 +21,21 @@ class Game {
 
         this.createEnemy = setInterval(() => {
             this.enemies.push(new EnemyFish(this));
-        }, 3000);
+        }, 2500);
 
         this.createEnemy2 = setInterval(() => {
             this.enemies2.push(new EnemyFish2(this));
-        }, 5000);
+        }, 4000);
 
         this.createEnemy3 = setInterval(() => {
             this.enemies3.push(new EnemyFish3(this));
-        }, 7000);
+        }, 6500);
 
         this.createShark = setInterval(() => {
             this.sharks.push(new Shark(this));
-        }, 12000);
+        }, 11000);
 
     }
-
-    
-
-    // playMusic() {
-    //     const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3')
-    //     music.play()
-    //     music.loop = true;
-    // }
-    
-    // pauseMusic() {
-    //     const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3')
-    //     music.pause()
-    // }
 
     playSoundEffect() {
         const soundEffect = new Audio('src/assets/Sound_Effect.mp3')
@@ -90,22 +76,16 @@ class Game {
         this.enemies3 = [];
         this.sharks = [];
         this.player = null;
-
-
         const menu = document.getElementById('gameovermenu');
         menu.style.display = 'flex';
-
-        // let div = document.createElement("div");                 
-        // let node = document.createTextNode('Game Over');         
-        // div.appendChild(node);
     }
     
     update(ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         if (this.player) {
             this.drawPlayer()
+            this.player.handleEdges();
         }
-        // this.drawPlayer();
         this.drawEnemies();
         this.drawEnemies2();
         this.drawEnemies3();
@@ -114,9 +94,6 @@ class Game {
         this.checkCollisionEnemy2();
         this.checkCollisionEnemy3();
         this.checkCollisionShark();
-        if (this.player) {
-            this.player.handleEdges();
-        }    
     }
 
     drawPlayer() {
@@ -240,6 +217,5 @@ class Game {
             }
         })
     }
-
 }
 export default Game;

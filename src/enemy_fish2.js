@@ -8,8 +8,8 @@ class EnemyFish2 {
         this.x = 1200;
         this.y = Math.random() * 800;
 
-        this.width = 105;
-        this.height = 60;
+        this.width = 95;
+        this.height = 50;
         
         this.img = new Image();
         this.img.src = "src/assets/Enemy2.png";
