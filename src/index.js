@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const soundOn = document.getElementById("sound-off");
     soundOn.style.display = 'none'
     soundOff.style.display = 'none'
-    
-    
-    
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext('2d');
     
