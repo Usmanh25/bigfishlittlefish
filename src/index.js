@@ -4,17 +4,20 @@ import Game from "./game.js"
 document.addEventListener("DOMContentLoaded", function(){
 
 
-    const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3');
     const soundOff = document.getElementById("sound-on");
     const soundOn = document.getElementById("sound-off");
     soundOn.style.display = 'none'
-
-
+    soundOff.style.display = 'none'
+    
+    
     
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext('2d');
     
     document.getElementById('play').addEventListener('click', (e) => {
+        soundOff.style.display = 'block'
+        soundOn.style.display = 'none'
+        const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3');
         e.preventDefault();
         const ctx = canvas.getContext('2d');
         document.getElementById('menu').style.display = 'none';
