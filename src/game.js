@@ -221,19 +221,19 @@ class Game {
                 winner = true
             }
 
-            if (this.player.x < shark.x + shark.width &&
-                this.player.x + this.player.width > shark.x &&
-                this.player.y < shark.y + shark.height &&
-                this.player.y + this.player.height > shark.y && 
+            if (this.player.x < shark.x-150 + shark.width-150 &&
+                this.player.x + this.player.width > shark.x+50 &&
+                this.player.y < shark.y-50 + shark.height &&
+                this.player.y + this.player.height > shark.y+50 && 
                 winner === true) {
                     this.playSoundEffect()
                     this.winGame()
             }
                 
-            if (this.player.x < shark.x + shark.width &&
-                this.player.x + this.player.width > shark.x &&
-                this.player.y < shark.y + shark.height &&
-                this.player.y + this.player.height > shark.y && 
+            if (this.player.x < shark.x-150 + shark.width-150 &&
+                this.player.x + this.player.width > shark.x+50 &&
+                this.player.y < shark.y-50 + shark.height &&
+                this.player.y + this.player.height > shark.y+50 && 
                 winner === false) {
                     this.playSoundEffect()
                     this.stopGame()
