@@ -222,7 +222,7 @@ class Game {
             }
 
             if (this.player.x < shark.x-150 + shark.width-150 &&
-                this.player.x + this.player.width > shark.x+50 &&
+                this.player.x + this.player.width > shark.x+20 &&
                 this.player.y < shark.y-50 + shark.height &&
                 this.player.y + this.player.height > shark.y+50 && 
                 winner === true) {
@@ -231,7 +231,7 @@ class Game {
             }
                 
             if (this.player.x < shark.x-150 + shark.width-150 &&
-                this.player.x + this.player.width > shark.x+50 &&
+                this.player.x + this.player.width > shark.x+20 &&
                 this.player.y < shark.y-50 + shark.height &&
                 this.player.y + this.player.height > shark.y+50 && 
                 winner === false) {
