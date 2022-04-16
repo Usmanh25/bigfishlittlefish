@@ -181,16 +181,6 @@ body {
     cursor: pointer;
 }
 
-#mutebutton {
-    font-size: 200px;
-    z-index: 999;
-}
-
-#mutebutton:hover {
-    cursor: pointer
-}
-
-// added
 
 #sound-off {
     position: absolute;
@@ -198,17 +188,14 @@ body {
     width: 50px;
     margin-left: 40px;
     margin-top: 40px;
-    // z-index: 9999;
+    cursor: pointer;
 }
+
 #sound-on {
     position: absolute;
     margin-top: 40px;
     height: 50px;
     width: 50px;
     margin-left: 40px;
-    // z-index: 9999;
-}
-
-.sound-on-wrapper:hover, .sound-off-wrapper:hover {
     cursor: pointer;
 }

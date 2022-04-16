@@ -27,32 +27,18 @@ document.addEventListener("DOMContentLoaded", function(){
         music.play()
         document.addEventListener('keydown', player.keyDown);
         document.addEventListener('mousemove', player.mouseMove); 
-        
-        // window.addEventListener('click', game.playMusic())
 
-
-        // soundOff.addEventListener("click", e => {
-        //     music.muted = true
-        // });
-        
         soundOn.addEventListener("click", e => {
             music.muted = false
             soundOn.style.display = "none";
             soundOff.style.display = "block";
         });
+
         soundOff.addEventListener("click", e => {
             music.muted = true
             soundOff.style.display = "none";
             soundOn.style.display = "block";
         });
-
-
-
-        // document.getElementById('mutebutton').addEventListener('click', (e) => {
-        //     const game = new Game(canvas, player);
-        //     console.log('clickaroo')
-        //     game.pauseMusic() 
-        // })
 
     })
 
