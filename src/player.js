@@ -23,58 +23,14 @@ class Player {
     }
     
     draw() {
-        this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-
-        // setInterval(() => {
-        //     this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-        // }, 1000);
-
-        // const currentX = this.x
-        // const newX = currentX 
-
-
-
-
-
-
-
-
-
-        // const mouse = {
-        //     x: this.canvas.width/2,
-        //     y: this.canvas.height/2
-        // }
-        // const currentMouseX = this.x
-        // var a = 
+        const currentX = this.x
+        const mouse = {x: this.canvas.width/2 + 70}
         
-
-        // const currentMouseX = this.x;
-        // const a = currentMouseX;
-
-        // setInterval(function()
-        // {
-        //     if (a =! currentMouseX) {
-        //         if (a > currentMouseX) {
-        //             this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-        //         } else if (a < currentMouseX) {
-        //             this.ctx.drawImage(this.img2, this.x, this.y, this.width, this.height)
-        //         }
-        //     }
-        // }, 1000);
-
-        
-
-        // if (newMouseX >= currentMouseX) {
-            // this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-        // } else {
-        //     this.ctx.drawImage(this.img2, this.x, this.y, this.width, this.height)
-        // }
-
-        // console.log(currentMouseX)
-
-
-
-        
+        if (currentX <= mouse.x) {
+            this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        } else {
+            this.ctx.drawImage(this.img2, this.x, this.y, this.width, this.height) 
+        }
     }
 
     moveUp() {  
