@@ -38,8 +38,8 @@ class Game {
     }
 
     playSoundEffect() {
-        const soundEffect = new Audio('src/assets/Sound_Effect.mp3')
-        soundEffect.play()
+        const soundEffect = new Audio('src/assets/Sound_Effect.mp3');
+        soundEffect.play();
     }
 
     startGame() {
@@ -51,25 +51,25 @@ class Game {
     }
 
     winGame() {
-        clearInterval(this.createEnemy)
-        clearInterval(this.createEnemy2)
-        clearInterval(this.createEnemy3)
-        clearInterval(this.createShark)
+        clearInterval(this.createEnemy);
+        clearInterval(this.createEnemy2);
+        clearInterval(this.createEnemy3);
+        clearInterval(this.createShark);
         this.ctx.clearRect(0, 0, canvas.width, canvas.height);
         this.enemies = [];
         this.enemies2 = [];
         this.enemies3 = [];
         this.sharks = [];
         this.player = null;
-        const menu = document.getElementById('gamewinmenu')
+        const menu = document.getElementById('gamewinmenu');
         menu.style.display = 'flex';
     }
 
     stopGame() {
-        clearInterval(this.createEnemy)
-        clearInterval(this.createEnemy2)
-        clearInterval(this.createEnemy3)
-        clearInterval(this.createShark)
+        clearInterval(this.createEnemy);
+        clearInterval(this.createEnemy2);
+        clearInterval(this.createEnemy3);
+        clearInterval(this.createShark);
         this.ctx.clearRect(0, 0, canvas.width, canvas.height);
         this.enemies = [];
         this.enemies2 = [];
@@ -83,7 +83,7 @@ class Game {
     update(ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         if (this.player) {
-            this.drawPlayer()
+            this.drawPlayer();
             this.player.handleEdges();
         }
         this.drawEnemies();
@@ -151,7 +151,7 @@ class Game {
                 this.player.x + this.player.width > enemy.x &&
                 this.player.y < enemy.y + enemy.height &&
                 this.player.y + this.player.height > enemy.y) {
-                    this.playSoundEffect()
+                    this.playSoundEffect();
                     this.enemies.splice(this.enemies.indexOf(enemy), 1);
                     this.player.height += 10;
                     this.player.width += 20;
@@ -165,7 +165,7 @@ class Game {
                 this.player.x + this.player.width > enemy2.x &&
                 this.player.y < enemy2.y + enemy2.height &&
                 this.player.y + this.player.height > enemy2.y) {
-                    this.playSoundEffect()
+                    this.playSoundEffect();
                     this.enemies2.splice(this.enemies2.indexOf(enemy2), 1);
                     this.player.height += 20;
                     this.player.width += 40; 
@@ -179,12 +179,12 @@ class Game {
                 this.player.x + this.player.width > enemy3.x &&
                 this.player.y < enemy3.y + enemy3.height &&
                 this.player.y + this.player.height > enemy3.y) {
-                    this.playSoundEffect()
+                    this.playSoundEffect();
                     this.enemies3.splice(this.enemies3.indexOf(enemy3), 1);
                     this.player.height -= 20;
                     this.player.width -= 40;
                     if (this.player.height <= 0) {
-                        this.stopGame()
+                        this.stopGame();
                     }
             }
         })
@@ -203,8 +203,8 @@ class Game {
                 this.player.y < shark.y-50 + shark.height &&
                 this.player.y + this.player.height > shark.y+50 && 
                 winner === true) {
-                    this.playSoundEffect()
-                    this.winGame()
+                    this.playSoundEffect();
+                    this.winGame();
             }
                 
             if (this.player.x < shark.x-150 + shark.width-150 &&
@@ -212,8 +212,8 @@ class Game {
                 this.player.y < shark.y-50 + shark.height &&
                 this.player.y + this.player.height > shark.y+50 && 
                 winner === false) {
-                    this.playSoundEffect()
-                    this.stopGame()
+                    this.playSoundEffect();
+                    this.stopGame();
             }
         })
     }

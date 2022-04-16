@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function(){
     const ctx = canvas.getContext('2d');
 
     const soundOn = document.getElementById("sound-off");
-    soundOn.style.display = 'none'
+    soundOn.style.display = 'none';
 
     const soundOff = document.getElementById("sound-on");
-    soundOff.style.display = 'none'
+    soundOff.style.display = 'none';
     
     document.getElementById('play').addEventListener('click', (e) => {
 
@@ -29,22 +29,22 @@ document.addEventListener("DOMContentLoaded", function(){
         
         game.startGame();
         game.update(ctx);
-        music.play()
+        music.play();
 
         document.addEventListener('keydown', player.keyDown);
         document.addEventListener('mousemove', player.mouseMove); 
         
-        soundOn.style.display = 'none'
-        soundOff.style.display = 'block'
+        soundOn.style.display = 'none';
+        soundOff.style.display = 'block';
 
         soundOn.addEventListener("click", e => {
-            music.muted = false
+            music.muted = false;
             soundOn.style.display = "none";
             soundOff.style.display = "block";
         });
 
         soundOff.addEventListener("click", e => {
-            music.muted = true
+            music.muted = true;
             soundOff.style.display = "none";
             soundOn.style.display = "block";
         });
@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
     document.getElementById('restart-button').addEventListener('click', (e) => {
-        window.location.reload()
+        window.location.reload();
     })
 
     document.getElementById('replay-button').addEventListener('click', (e) => {
-        window.location.reload() 
+        window.location.reload();
     })
 
 });
