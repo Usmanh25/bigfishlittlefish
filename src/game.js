@@ -38,11 +38,18 @@ class Game {
 
     }
 
-    playMusic() {
-        const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3')
-        music.play()
-        music.loop = true;
-    }
+    
+
+    // playMusic() {
+    //     const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3')
+    //     music.play()
+    //     music.loop = true;
+    // }
+    
+    // pauseMusic() {
+    //     const music = new Audio('src/assets/SpongeBob_Credits_Audio.mp3')
+    //     music.pause()
+    // }
 
     playSoundEffect() {
         const soundEffect = new Audio('src/assets/Sound_Effect.mp3')

@@ -1,61 +1,75 @@
 <html>
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./dist/main.css" />
-    <script src="./dist/main.js"></script>
-    <title>Big Fish Little Fish</title>
-</head>
 
-<body>
-
-
-    <div id="game-div">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./dist/main.css" />
+        <script src="./dist/main.js"></script>
+        <title>Big Fish Little Fish</title>
+    </head>
+    
+    <body>
         
-        <!-- <div classname="social-pages">
-
-            
-        </div> -->
-        
-        <div id="menu">
-            <h1>Big Fish, Little Fish</h1>
-            <h2>Use the cursor or arrow keys to navigate the fish!</h2>
-            <h2>Eat fish to increase size! Pufferfish decrease size!</h2>
-            <h2>Avoid the Sharks, until you're big enough to eat one!</h2>
+        <div id="game-div">
 
             <div>
-                <a target="_blank" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/">
-                    <img id="linkedin" src="src/assets/Linkedin.png" alt="LinkedIn">
-                </a>
-                <button id="play">
-                    <h1>PLAY</h1>
-                </button>
-                <a target="_blank" href="https://github.com/Usmanh25">
-                    <img id="github" src="src/assets/Github.png" alt="GitHub">
-                </a>
+
+                <div class="sound-on-wrapper" onClick="toggle()">
+                    <img id="sound-on" class="sound-button" src="src/assets/SoundOn.png" alt="sound-on">
+                </div>
+
+                <div class="sound-off-wrapper">
+                    <img id="sound-off" class="sound-button" src="src/assets/SoundOff.png" alt="sound-off">
+                </div>
+
             </div>
+
+            
+            <div id="menu">
+
+                <h1>Big Fish, Little Fish</h1>
+                <h2>Use the cursor or arrow keys to navigate the fish!</h2>
+                <h2>Eat fish to increase size; Pufferfish decrease size!</h2>
+                <h2>Avoid the Sharks, until you're big enough to eat one!</h2>
+
+                <div>
+
+                    <a target="_blank" href="https://www.linkedin.com/in/usman-hameed-5486b11b0/">
+                        <img id="linkedin" src="src/assets/Linkedin.png" alt="LinkedIn">
+                    </a>
+
+                    <button id="play">
+                        <h1>PLAY</h1>
+                    </button>
+
+                    
+                    <a target="_blank" href="https://github.com/Usmanh25">
+                        <img id="github" src="src/assets/Github.png" alt="GitHub">
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <canvas id="canvas"></canvas>
+
+            <div id = "gameovermenu" class="div_class" style="display:none">
+                <h1>YOU LOSE</h1>
+                <button type="button" id="restart-button">
+                    <h1>MAIN MENU</h1>
+                </button>
+            </div>
+
+            <div id = "gamewinmenu" class="div_class" style="display:none">
+                <h1>YOU WIN</h1>
+                <button type="button" id="replay-button">
+                    <h1>MAIN MENU</h1>
+                </button>
+            </div>
+
         </div>
-        
-        
-        <canvas id="canvas"></canvas>
 
-        <div id = "gameovermenu" class="div_class" style="display:none">
-            <h1>YOU LOSE</h1>
-            <button type="button" id="restart-button">
-                <h1>MAIN MENU</h1>
-            </button>
-        </div>
-
-        <div id = "gamewinmenu" class="div_class" style="display:none">
-            <h1>YOU WIN</h1>
-            <button type="button" id="replay-button">
-                <h1>MAIN MENU</h1>
-            </button>
-        </div>
-
-    </div>
-
-</body>
+    </body>
 
 </html>

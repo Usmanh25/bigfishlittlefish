@@ -174,3 +174,30 @@ body {
 #replay-button:hover {
   cursor: pointer;
 }
+
+#mutebutton {
+  font-size: 200px;
+  z-index: 999;
+}
+
+#mutebutton:hover {
+  cursor: pointer;
+}
+
+#sound-off {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-left: 40px;
+}
+
+#sound-on {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-left: 40px;
+}
+
+.sound-on-wrapper:hover, .sound-off-wrapper:hover {
+  cursor: pointer;
+}
