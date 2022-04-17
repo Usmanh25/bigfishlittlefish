@@ -1,4 +1,4 @@
-# Big Fish Little Fish
+# Big Fish, Little Fish
 
 [Play Big Fish, Little Fish!](https://usmanh25.github.io/bigfishlittlefish/)
 
@@ -35,10 +35,11 @@
 
 ## Technical Implementations
 
-One of the more satisfying implementations was the mouse-over implementation, which controls the player. By adding an event listener for 'mousemove' nested under the 'click' listener which begins gameplay, an algorithm is then added to the function 'mouseMove' in the player.js file, which keeps track of the cursor's positioning on the screen relative to the canvas API, and correlates it to the player object.
+One of the more satisfying implementations was the mouse-over implementation, which controls the player. By adding an event listener for 'mousemove' nested under the 'click' listener which begins gameplay, an algorithm is then added to the function 'mouseMove' in the player.js file, which keeps track of the cursor's (x, y) positioning on the screen relative to the canvas API, and correlates it to the player object.
 
 ```javascript
 // src/index.js
+
     document.getElementById('play').addEventListener('click', (e) => {
         document.addEventListener('mousemove', player.mouseMove); 
     }
@@ -46,14 +47,20 @@ One of the more satisfying implementations was the mouse-over implementation, wh
 
 ```javascript
 // src/player.js
+
     mouseMove(event) {
-        const canvasPosition = this.canvas.getBoundingClientRect();
+
+        const canvasPosition = this.canvas.
+
+        getBoundingClientRect();
+
         const mouse = {
             x: this.canvas.width/2,
             y: this.canvas.height/2
         }
-        mouse.x = e.x - canvasPosition.left;
-        mouse.y = e.y - canvasPosition.top;
+        
+        mouse.x = event.x - canvasPosition.left;
+        mouse.y = event.y - canvasPosition.top;
     
         const dimensionX = this.x - mouse.x;
         const dimensionY = this.y - mouse.y;
