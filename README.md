@@ -1,41 +1,41 @@
 # Big Fish Little Fish
 
-## Background
+[Play Big Fish, Little Fish!](https://usmanh25.github.io/bigfishlittlefish/)
 
-This project is named "Big Fish Little Fish." The game has a simple user interface, using the arrow keys to maneuver a fish around the screen. The point of the game is to eat other fish and grow in size. Whie doing so, you must avoid sharks that are rendered into the screen, transversing towards you in horizontal lines. If you are smaller than the shark and make contact, you lose the game. If you are bigger than the shark and make contact, you win.
+## Overview
 
-## Functionality & MVPs
+"Big Fish Little Fish" is a nautical themed single-player Javascript game with a simple & satisfying user interface, playable for all ages. The player must maneuver around the screen, avoiding sharks and eating fish. The game is won when the player grows larger than the shark and makes contact. The game is lost if the player makes contact with the shark's mouth otherwise.
 
-In "Big Fish Little Fish," users will be able to:
+## Features
 
-- Move up/down/left/right to control the fish's movement
+- Arrow keys control the player's movement
+- Cursor controls the player's movement
 
-- Increase in size when eating brown or blue fish
+- Player increases by 1 size when eating brown fish
+- Player increases by 2 sizes when eating blue fish
+- Player decreases by 1 size when eating yellow fish
 
-- Decrease in size when eating yellow fish
+- Gameplay music and "pop" sound effect when eating fish
+- Gameplay music toggle button on top left of screen
 
-In addition, this project will include:
-
-- a Main Menu where users can select options to "Play Game"
-
-- a "You Win" Menu, where users can select options to return to the Main Menu 
-
-- a "You Lose" Menu, where users can select options to return to the Main Menu 
+- Main Menu - users can select "Play" option
+- "You Win" Menu - users can select "Main Menu" option
+- "You Lose" Menu - users can select "Main Menu" option
 
 ## Wireframe
 
-<img src="https://github.com/Usmanh25/bigfishlittlefish/blob/master/src/assets/BFLF.png"></img>
+<img src="https://github.com/Usmanh25/bigfishlittlefish/blob/master/src/assets/Wireframe1.png"></img>
+
+<img src="https://github.com/Usmanh25/bigfishlittlefish/blob/master/src/assets/Wireframe2.png"></img>
 
 ## Technologies, Libraries, APIs
 
-- I will be using Canvas API
+- Vanilla Javascript
+- HTML5
+- CSS3
+- Canvas API
 
 ## Future Features
 
-- Adding mouseover functionality to control the fish with your cursor
-
-- Adding mousedown functionality to control the fish with touchscreens
-
-- Game Music with Sound Affects and Mute Buttons
-
-- Score calculation and high scores log 
+- Adding touch functionality to control the player on touchscreen devices
+- Score calculation
