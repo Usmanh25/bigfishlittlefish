@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function(){
         game.startGame();
         game.update(ctx);
         music.play();
+        music.loop = true
 
         document.addEventListener('keydown', player.keyDown);
         document.addEventListener('mousemove', player.mouseMove); 
