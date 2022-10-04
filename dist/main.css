@@ -26,49 +26,51 @@ body {
 #menu {
   margin-left: 115px;
   position: absolute;
-  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#menu > h1 {
-  font-size: 105px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: white;
-  height: 125px;
-  border-bottom: 5px solid white;
-  margin-top: 50px;
-  margin-bottom: 120px;
+#text {
+  padding-bottom: 25px;
 }
 
-#menu > h2 {
+#text > h1 {
+  font-size: 105px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: aqua;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+#text > h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
   text-align: center;
-  margin-bottom: 10px;
-  color: white;
-  height: 10%;
+  color: aqua;
 }
 
 #play {
   margin-top: 30px;
   width: 300px;
-  border: whitesmoke solid 8px;
+  border: aqua solid 8px;
   font-size: 35px;
-  background-color: aqua;
+  background-color: black;
 }
 
 #play > h1 {
-  border: white;
-  color: white;
+  color: aqua;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #play:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
 }
 
 #github {
@@ -79,12 +81,35 @@ body {
   margin-right: -400px;
 }
 
+#github:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
+}
+
 #linkedin {
   margin-top: 30px;
   height: 80px;
   float: left;
   width: 80px;
   margin-left: -400px;
+}
+
+#linkedin:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
+}
+
+#angellist {
+  margin-top: 30px;
+  height: 80px;
+  float: left;
+  width: 80px;
+  margin-left: -300px;
+}
+
+#angellist:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
 }
 
 #sound-off {
